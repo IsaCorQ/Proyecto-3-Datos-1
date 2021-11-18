@@ -151,51 +151,65 @@ public class FilterJList extends javax.swing.JFrame {
     private void myJListMouseClicked(java.awt.event.MouseEvent evt) {
         System.out.println(myJList.getSelectedValue());
         switch (myJList.getSelectedValue()) {
-            case "1":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: ##"+"\nLugares de interes: "+"\nLugares de comida: "+
+            case "Albany":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 95.658"+"\nLugares de interes: "+"\nLugares de comida: "+
                 "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "2":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Auburn":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28.574"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "3":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Binghamton":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 47380"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "4":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Búfalo":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 292648"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "5":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Ithaca":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 29287"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "6":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Mount Vernon":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 68321"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "7":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "New Rochelle":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 72182"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "8":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "New York City":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 8274527"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "9":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Newburgh":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28259"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "10":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Nigara Falls":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 55593"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "11":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Rochester":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 208123"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "12":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Syracuse":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 147306"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "13":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Utica":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 60651"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "14":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "White Plains":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 53077"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "15":
-                JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Yonkers":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 196086"+"\nLugares de interes: "+"\nLugares de comida: "+
+                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             default:
                 System.out.println("Error");
