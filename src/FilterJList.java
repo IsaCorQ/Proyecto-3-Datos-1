@@ -6,6 +6,7 @@ import javax.swing.ListSelectionModel;
 public class FilterJList extends javax.swing.JFrame {
 
     DefaultListModel defaultListModel=new DefaultListModel();
+    
 
     /*
     Constructor
@@ -19,23 +20,15 @@ public class FilterJList extends javax.swing.JFrame {
     */
     private ArrayList getStars()
     {
+        QuickSortName algorithm = new QuickSortName();
+        String[] unsorted = {"Nigara Falls",
+            "Newburgh","Albany","New Rochelle","New York City","Ithaca","Binghamton",
+            "Mount Vernon","Yonkers","Utica","White Plains","Rochester","Auburn","Syracuse","Búfalo"};
+        algorithm.sort(unsorted);
         ArrayList stars=new ArrayList();
-        stars.add("Albany");
-        stars.add("Auburn");
-        stars.add("Binghamton");
-        stars.add("Búfalo");
-        stars.add("Ithaca");
-        stars.add("Mount Vernon");
-        stars.add("New Rochelle");
-        stars.add("New York City");
-        stars.add("Newburgh");
-        stars.add("Nigara Falls");
-        stars.add("Rochester");
-        stars.add("Syracuse");
-        stars.add("Utica");
-        stars.add("White Plains");
-        stars.add("Yonkers");
-
+        for (String i : unsorted) {
+            stars.add(i);
+        }
         return stars;
     }
     /*
@@ -152,11 +145,11 @@ public class FilterJList extends javax.swing.JFrame {
         System.out.println(myJList.getSelectedValue());
         switch (myJList.getSelectedValue()) {
             case "Albany":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 95.658"+"\nLugares de interes: "+"\nLugares de comida: "+
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 95658"+"\nLugares de interes: "+"\nLugares de comida: "+
                 "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Auburn":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28.574"+"\nLugares de interes: "+"\nLugares de comida: "+
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28574"+"\nLugares de interes: "+"\nLugares de comida: "+
                 "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Binghamton":
