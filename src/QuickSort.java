@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * Test class to sort array of integers using Quicksort algorithm in Java.
  *
- * @author Javin Paul
+ * @author Cristopher Moreira
  */
 public class QuickSort {
  
