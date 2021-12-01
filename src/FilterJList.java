@@ -72,7 +72,6 @@ public class FilterJList extends javax.swing.JFrame {
         searchTxt = new javax.swing.JTextField();
         searchLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana de ayuda");
 
         jPanel1.setBackground(new java.awt.Color(14, /**153*/84, /**104*/196));
@@ -247,7 +246,7 @@ public class FilterJList extends javax.swing.JFrame {
     }                                     
 
     //main method
-    public static void main(String args[]) {
+    /*public static void main(String args[]) {
 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -262,7 +261,7 @@ public class FilterJList extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> {
             new FilterJList().setVisible(true);
         });
-    }
+    }*/
 
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
