@@ -49,13 +49,13 @@ public class getdistancesAPI {
     }
     return distance;     
 }
-public static void main(String[] args)throws Exception {
+/*public static void main(String[] args)throws Exception {
     for (int i = 0; i < n; i++){
         System.out.println("to "+cities[i]+": "+parse(getdata("AuburnSt", cities[i])));
     }
 
-}
-/*       
+}*/
+       
     public static void main(String[] args) throws Exception {
         distances = new float[n][n];
         String parse;
@@ -88,5 +88,5 @@ public static void main(String[] args)throws Exception {
             string="";
         }out.close();
         System.out.println("done");
-    }*/
+    }
 }
