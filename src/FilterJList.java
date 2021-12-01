@@ -1,11 +1,14 @@
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
+import javax.swing.text.AttributeSet.ColorAttribute;
 
 public class FilterJList extends javax.swing.JFrame {
 
     DefaultListModel defaultListModel=new DefaultListModel();
+    
 
     /*
     Constructor
@@ -19,23 +22,15 @@ public class FilterJList extends javax.swing.JFrame {
     */
     private ArrayList getStars()
     {
+        QuickSortName algorithm = new QuickSortName();
+        String[] unsorted = {"Niagara Falls",
+            "Newburgh","Albany","New Rochelle","New York City","Ithaca","Binghamton",
+            "Mount Vernon","Yonkers","Utica","White Plains","Rochester","Auburn","Syracuse","Búfalo"};
+        algorithm.sort(unsorted);
         ArrayList stars=new ArrayList();
-        stars.add("Albany");
-        stars.add("Auburn");
-        stars.add("Binghamton");
-        stars.add("Búfalo");
-        stars.add("Ithaca");
-        stars.add("Mount Vernon");
-        stars.add("New Rochelle");
-        stars.add("New York City");
-        stars.add("Newburgh");
-        stars.add("Nigara Falls");
-        stars.add("Rochester");
-        stars.add("Syracuse");
-        stars.add("Utica");
-        stars.add("White Plains");
-        stars.add("Yonkers");
-
+        for (String i : unsorted) {
+            stars.add(i);
+        }
         return stars;
     }
     /*
@@ -152,70 +147,99 @@ public class FilterJList extends javax.swing.JFrame {
         System.out.println(myJList.getSelectedValue());
         switch (myJList.getSelectedValue()) {
             case "Albany":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 95.658"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 95658"
+                +"\nLugares de interes: Albany Institute of History & Art, USS SLATER, New York State Museum"
+                +"\nLugares de comida: Villa di Como Ristorante, Son of Egg, Rosanna's"+
+                "\nGasolineras: Mobil, Gulf, Sunoco", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Auburn":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28.574"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28574"
+                +"\nLugares de interes: Seward House Museum, Cayuga Museum of History & Art, Grave of Harriet Tubman"
+                +"\nLugares de comida: Garcia's Mexican Restaurant, Starting Gate Restaurant"+
+                "\nGasolineras: Chevron, ARCO, Shell", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Binghamton":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 47380"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 47380"
+                +"\nLugares de interes: Ross Park Zoo, Roberson Museum and Science Center"
+                +"\nLugares de comida: Tsha's Kitchen, Parlor City Vegan, Paul & Sons Pizza"+
+                "\nGasolineras: Gulf, Mirabito Convenience Store, Speedway", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Búfalo":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 292648"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 292648"
+                +"\nLugares de interes: Casa Darwin D. Marti, Zoológico de Búfalo"
+                +"\nLugares de comida: The Grotto, Vasilis Restaurant En Lefko, Buffalo Chophouse"+
+                "\nGasolineras: Minitz Tonawanda, Gulf, Sunoco", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Ithaca":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 29287"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 29287"
+                +"\nLugares de interes: Herbert F. Johnson Museum of Art, Ithaca Falls"
+                +"\nLugares de comida: Maxie's Supper Club & Oyster Bar, Ithaca Ale House"+
+                "\nGasolineras: Sunoco, Speedway, Kwik Fill", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Mount Vernon":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 68321"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 68321"
+                +"\nLugares de interes: St Pauls Church National Historic Site"
+                +"\nLugares de comida: The Bayou, Maggie Spillane's Ale House and Rooftop"+
+                "\nGasolineras: South Mount Vernon Park and Ride, Chevron", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "New Rochelle":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 72182"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 72182"
+                +"\nLugares de interes: Glen Island Park, Five Islands Park, Thomas Paine Cottage Museum"
+                +"\nLugares de comida: Dubrovnik, Modern Restaurant & Lounge, Aura wine & Bar"+
+                "\nGasolineras: Gulf Express, New Rochelle Auto Care Citgo Gas Station", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "New York City":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 8274527"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 8274527"
+                +"\nLugares de interes: Central Park, Estatua de la Libertad, Empire State Building"
+                +"\nLugares de comida: Frevo, Royal 35 Steakhouse"+
+                "\nGasolineras: Exxon, Mobil, Shell", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Newburgh":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28259"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 28259"
+                +"\nLugares de interes: Dia Beacon, Washington's Headquarters State Historic Site"
+                +"\nLugares de comida: El Metapaneco Restaurant, North Plank Road Tavern"+
+                "\nGasolineras: Gulf, NEWBURGH CITGO", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
-            case "Nigara Falls":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 55593"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+            case "Niagara Falls":
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 55593"
+                +"\nLugares de interes: Parque estatal de las Cataratas del Niágara, Cave of the Winds, Cataratas Del Niagara"
+                +"\nLugares de comida: Hard Rock Cafe, Fuji Grill Niagara Falls"+
+                "\nGasolineras: Elasco of Niagara Falls, Niagara Fuel Mart", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Rochester":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 208123"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 208123"
+                +"\nLugares de interes: George Eastman House, The Strong National Museum of Play"
+                +"\nLugares de comida: Tapas 177, Natural Oasis Market"+
+                "\nGasolineras: Gulf, Exxon, Malcho's 619 Monroe Ave Inc", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Syracuse":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 147306"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 147306"
+                +"\nLugares de interes: Everson Museum of Art, Rosamond Gifford Zoo"
+                +"\nLugares de comida: Dinosaur Bar-B-Que, Texas Roadhouse"+
+                "\nGasolineras: Gulf, SOUTH SIDE SELF SERVICE", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Utica":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 60651"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 60651"
+                +"\nLugares de interes: Munson-Williams-Proctor Arts Institute, Utica Zoo, Adirondack Railroad"
+                +"\nLugares de comida: Milano Restaurant, Curbside BBQ & Fish Fry, Happy Feet Caribbean cuisine"+
+                "\nGasolineras: NORTH UTICA CITGO, Atlas Service Station", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "White Plains":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 53077"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 53077"
+                +"\nLugares de interes: Neuberger Museum of Art, The Haunt at Rocky Ledge, Kensico Dam Plaza"
+                +"\nLugares de comida: Sunset Restaurant and Bar, Mulino's of Westchester, BLT Steak White Plains"+
+                "\nGasolineras: Mobil, Gulf, Sprinter Service", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Yonkers":
-                JOptionPane.showMessageDialog(rootPane,"Habitantes: 196086"+"\nLugares de interes: "+"\nLugares de comida: "+
-                "\nGasolineras: ", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane,"Habitantes: 196086"
+                +"\nLugares de interes: LEGOLAND Discovery Center Westchester, Untermyer Park and Gardens, Broadway"
+                +"\nLugares de comida: Cariño's Restaurant Corp, Rory Dolan's Restaurant & Bar, Zuppa"+
+                "\nGasolineras: Ultimate Gas Station, Yonkers Food & Gas Inc", "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
                 break;
             default:
                 System.out.println("Error");
                 break;
         }
-        //JOptionPane.showMessageDialog(rootPane,myJList.getSelectedValue()/**Aqui va el texto mostrado */, "Lugar seleccionado", JOptionPane.INFORMATION_MESSAGE);
     }                                    
 
     private void searchTxtKeyReleased(java.awt.event.KeyEvent evt) {                                      
