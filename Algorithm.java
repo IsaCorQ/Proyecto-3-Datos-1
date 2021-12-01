@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Algorithm {
+	/**
+	 * Dijkstra algorithm, it uses an arrayList to get the values needed for the calculations
+	 * @author Isa Cordoba, Ian Hu
+	 */
 	
 	// It will store the path as a String
 	String via;
@@ -20,6 +24,12 @@ public class Algorithm {
 	}
 
 	public void Dijkstra(int graph[][], int source, int destination){
+		/**
+		 * The calculations of the graph and its nodes and paths begins here
+		 * @Param An array list with the source and destination of the path
+		 * @Returns The path of lesser weight
+		 * @author Isa Cordoba, Ian Hu
+		 */
 		
 		// size is the number of vertex
 		int size = graph[0].length;
