@@ -1,5 +1,7 @@
-package Dijkstra;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +15,26 @@ public class Frame extends JFrame{
 	private static final long serialVersionUID = 1L;
 
 	// Adjacency matrix (used to get minimum distance and path)
+<<<<<<< HEAD
+	int[][] adjacency= {{0,0,184,0,0,0,25,0,0,28,0,40,0,83,0},
+			{0,0,0,25,105,197,0,0,200,0,0,0,0,0,0},
+			{185,0,0,0,0,176,174,115,0,185,0,0,0,108,170},
+			{0,25,0,0,92,185,0,0,187,0,0,0,0,0,240},
+			{0,105,0,89,0,106,0,0,107,0,0,0,0,0,193},
+			{0,197,178,182,106,0,0,66,68,0,0,0,0,0,89},
+			{24,0,174,0,0,0,0,0,0,11,0,20,0,67,0},
+			{0,0,116,0,0,66,0,0,132,0,0,0,0,0,107},
+			{0,0,0,0,107,68,0,132,0,0,0,0,0,0,59},
+			{29,0,185,0,0,0,12,0,0,0,0,18,0,77,0},
+			{0,0,0,0,0,0,0,0,418,323,0,0,0,0,0},
+			{43,0,168,0,0,0,19,0,0,18,0,0,0,60,0},
+			{0,0,0,0,0,0,237,0,0,228,0,224,0,234,0},
+			{83,0,107,0,0,0,67,0,0,83,0,62,0,0,170},
+			{0,0,170,0,192,88,0,120,59,0,0,0,0,170,0}};
+
+	JPanel lowerPanel, bottomPanel,  resultPanel, graphPanel;
+	JButton calculate, start, reset;
+=======
 	int[][] adjacency= {{0,494,184,450,402,298,25,292,269,28,297,40,257,83,214},
 			{494,0,366,25,105,197,500,255,200,510,505,494,560,450,284},
 			{185,365,0,349,273,176,174,115,201,185,464,169,200,108,170},
@@ -30,7 +52,8 @@ public class Frame extends JFrame{
 			{213,284,170,239,192,88,219,120,59,230,389,214,367,170,0}};
 
 	JPanel lowerPanel, bottomPanel,  resultPanel;
-	JButton calculate, start, reset;
+	JButton calculate, start, reset, info;
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 	JTextField initialTextfield, finalTextfield;
 	JLabel initialLabel, finalLabel, resultLabel;
 	
@@ -38,7 +61,11 @@ public class Frame extends JFrame{
 	public Frame(){
 		setLayout(new BorderLayout());
 		Font textFont = new Font("Book Antiqua", Font.PLAIN, 18);
+<<<<<<< HEAD
+
+=======
 		
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 		// Frame Icon's Image
 		try{
 			Image image = Toolkit.getDefaultToolkit().getImage(getClass().getResource("abc.png"));
@@ -74,7 +101,19 @@ public class Frame extends JFrame{
 			start.setFont(new Font("Bell MT", Font.BOLD, 14));
 		reset = new JButton("Reset");
 			reset.setFont(new Font("Bell MT", Font.BOLD, 14));
+<<<<<<< HEAD
 
+		graphPanel= new JPanel();
+		ImageIcon image=new ImageIcon(getClass().getResource("graph.png"));
+		JLabel graph= new JLabel();
+		graph.setIcon(image);
+		graphPanel.setBackground(Color.WHITE);
+		graphPanel.add(graph);
+=======
+		info = new JButton("Info");
+			info.setFont(new Font("Bell MT", Font.BOLD, 14));
+
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 
 		initialTextfield.setEnabled(false);
 		finalTextfield.setEnabled(false);
@@ -92,6 +131,10 @@ public class Frame extends JFrame{
 		lowerPanel.add(finalTextfield);
 		lowerPanel.add(calculate);
 		lowerPanel.add(reset);
+<<<<<<< HEAD
+=======
+		lowerPanel.add(info);
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 
 		bottomPanel = new JPanel();
 		bottomPanel.setLayout(new BorderLayout());
@@ -99,6 +142,30 @@ public class Frame extends JFrame{
 		bottomPanel.add(lowerPanel, BorderLayout.CENTER);
 		bottomPanel.add(resultPanel, BorderLayout.NORTH);
 
+<<<<<<< HEAD
+		add(graphPanel,BorderLayout.CENTER);
+		add(bottomPanel, BorderLayout.SOUTH);
+
+
+		//Places an action listener to begin the methods initialized by pressing the button start
+		start.addActionListener(new ActionListener (){
+			public void actionPerformed(ActionEvent e){
+				adjacency= new int[][]{{0,0,184,0,0,0,25,0,0,28,0,40,0,83,0},
+						{0,0,0,25,105,197,0,0,200,0,0,0,0,0,0},
+						{185,0,0,0,0,176,174,115,0,185,0,0,0,108,170},
+						{0,25,0,0,92,185,0,0,187,0,0,0,0,0,240},
+						{0,105,0,89,0,106,0,0,107,0,0,0,0,0,193},
+						{0,197,178,182,106,0,0,66,68,0,0,0,0,0,89},
+						{24,0,174,0,0,0,0,0,0,11,0,20,0,67,0},
+						{0,0,116,0,0,66,0,0,132,0,0,0,0,0,107},
+						{0,0,0,0,107,68,0,132,0,0,0,0,0,0,59},
+						{29,0,185,0,0,0,12,0,0,0,0,18,0,77,0},
+						{0,0,0,0,0,0,0,0,418,323,0,0,0,0,0},
+						{43,0,168,0,0,0,19,0,0,18,0,0,0,60,0},
+						{0,0,0,0,0,0,237,0,0,228,0,224,0,234,0},
+						{83,0,107,0,0,0,67,0,0,83,0,62,0,0,170},
+						{0,0,170,0,192,88,0,120,59,0,0,0,0,170,0}};
+=======
 		add(bottomPanel, BorderLayout.SOUTH);
 
 		
@@ -120,6 +187,7 @@ public class Frame extends JFrame{
 						{257,560,200,545,469,371,237,311,398,228,551,224,0,234,367},
 						{83,449,107,406,357,254,67,216,224,83,366,62,234,0,170},
 						{213,284,170,239,192,88,219,120,59,230,389,214,367,170,0}};
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 				start.setEnabled(false);
 				initialTextfield.setEnabled(true);
 				finalTextfield.setEnabled(true);
@@ -133,28 +201,47 @@ public class Frame extends JFrame{
 				finalTextfield.requestFocus();
 			}
 		});
+<<<<<<< HEAD
+
+=======
 		
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 		// when you hit enter in finalTextfield, control will click calculate button
 		finalTextfield.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent text){
 				calculate.doClick();
 			}
 		});
+<<<<<<< HEAD
+
+		// It will calculate the required distance, Dijkstra algorithm works here
+		calculate.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent ee){
+
+=======
 		
 		// It will calculate the required distance, Dijkstra algorithm works here
 		calculate.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent ee){
 				
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 				try{
 					Integer source = Integer.parseInt(initialTextfield.getText());
 					Integer destination = Integer.parseInt(finalTextfield.getText());
 
 					initialTextfield.setText("");
 					finalTextfield.setText("");
+<<<<<<< HEAD
+
+					// main algorithm, m is the object of class Algorithm
+					m.Dijkstra(adjacency, source, destination);
+
+=======
 					
 					// main algorithm, m is the object of class Algorithm
 					m.Dijkstra(adjacency, source, destination);
 					
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 					// if there is no path b/w source and destination
 					if (m.distance == Integer.MAX_VALUE)
 						resultLabel.setText("There is no way to go from " + source +" to " + destination);
@@ -175,13 +262,34 @@ public class Frame extends JFrame{
 					finalTextfield.setText("");
 					initialTextfield.requestFocus();
 				}
+<<<<<<< HEAD
+
+=======
 				
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 			}
 		});
 
 		// reset button listener
 		reset.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
+				adjacency= new int[][]{{0,0,184,0,0,0,25,0,0,28,0,40,0,83,0},
+						{0,0,0,25,105,197,0,0,200,0,0,0,0,0,0},
+						{185,0,0,0,0,176,174,115,0,185,0,0,0,108,170},
+						{0,25,0,0,92,185,0,0,187,0,0,0,0,0,240},
+						{0,105,0,89,0,106,0,0,107,0,0,0,0,0,193},
+						{0,197,178,182,106,0,0,66,68,0,0,0,0,0,89},
+						{24,0,174,0,0,0,0,0,0,11,0,20,0,67,0},
+						{0,0,116,0,0,66,0,0,132,0,0,0,0,0,107},
+						{0,0,0,0,107,68,0,132,0,0,0,0,0,0,59},
+						{29,0,185,0,0,0,12,0,0,0,0,18,0,77,0},
+						{0,0,0,0,0,0,0,0,418,323,0,0,0,0,0},
+						{43,0,168,0,0,0,19,0,0,18,0,0,0,60,0},
+						{0,0,0,0,0,0,237,0,0,228,0,224,0,234,0},
+						{83,0,107,0,0,0,67,0,0,83,0,62,0,0,170},
+						{0,0,170,0,192,88,0,120,59,0,0,0,0,170,0}};
+=======
 				adjacency= new int[][]{{0,494,184,450,402,298,25,292,269,28,297,40,257,83,214},
 						{494,0,366,25,105,197,500,255,200,510,505,494,560,450,284},
 						{185,365,0,349,273,176,174,115,201,185,464,169,200,108,170},
@@ -197,6 +305,7 @@ public class Frame extends JFrame{
 						{257,560,200,545,469,371,237,311,398,228,551,224,0,234,367},
 						{83,449,107,406,357,254,67,216,224,83,366,62,234,0,170},
 						{213,284,170,239,192,88,219,120,59,230,389,214,367,170,0}};
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 				start.setEnabled(true);
 				initialTextfield.setEnabled(false);
 				finalTextfield.setEnabled(false);
@@ -204,6 +313,27 @@ public class Frame extends JFrame{
 				m.reset();
 			}
 		});
+<<<<<<< HEAD
+=======
+		info.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent event){
+				try {
+					for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+						if ("Nimbus".equals(info.getName())) {
+							javax.swing.UIManager.setLookAndFeel(info.getClassName());
+							break;
+						}
+					}
+				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+					java.util.logging.Logger.getLogger(FilterJList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+				}
+				java.awt.EventQueue.invokeLater(() -> {
+					new FilterJList().setVisible(true);
+				});
+			}
+
+		});
+>>>>>>> 69d70f682221004bf37930e87bc2a3ec3a1bed9b
 
 
 	}
